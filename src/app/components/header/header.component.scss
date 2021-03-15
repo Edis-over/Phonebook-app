@@ -1,0 +1,18 @@
+:host {
+  background-color: #3b3a3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 12vh;
+  .header-text {
+    text-align: center;
+    h1 {
+      color: #14d4a7;
+    }
+    p {
+      color: #14d4a7;
+    }
+  }
+}
