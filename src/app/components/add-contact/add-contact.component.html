@@ -1,119 +1,146 @@
 <h3>Add new contact details</h3>
 <hr />
-<form class="form">
-  <div class="form-group">
-    <label for="firstname">First Name:</label>
-    <input
-      id="firstname"
-      name="firstname"
-      [(ngModel)]="contact.firstname"
-      type="text"
-      class="form-control"
-      required
-    />
-  </div>
-  <div class="form-group">
-    <label for="lastname">Last Name:</label>
-    <input
-      id="lastname"
-      type="text"
-      name="lastname"
-      [(ngModel)]="contact.lastname"
-      class="form-control"
-      required
-    />
-  </div>
-  <div class="form-group">
-    <label>Gender: </label>
-    <label>
+
+<form class="form" ngNativeValidate (ngSubmit)="addContact()">
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="firstname">First Name:</label>
+    <div class="col-sm-9">
       <input
-        type="radio"
-        name="gender"
-        [(ngModel)]="contact.gender"
-        value="Male"
+        id="firstname"
+        name="firstname"
+        [(ngModel)]="contact.firstname"
+        type="text"
+        class="form-control"
+        required
+        ngNativeValidate
+        minlength="5"
       />
-      Male
-    </label>
-    <label>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="lastname" class="col-sm-3 col-form-label">Last Name:</label>
+    <div class="col-sm-9">
       <input
-        type="radio"
-        name="gender"
-        [(ngModel)]="contact.gender"
-        value="Female"
+        id="lastname"
+        type="text"
+        name="lastname"
+        [(ngModel)]="contact.lastname"
+        class="form-control"
+        required
       />
-      Female
-    </label>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="email">Email:</label>
-    <input
-      id="email"
-      type="email"
-      name="email"
-      [(ngModel)]="contact.email"
-      class="form-control"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Gender: </label>
+    <div class="col-sm-9">
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          [(ngModel)]="contact.gender"
+          value="Male"
+          required
+        />
+        Male
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          [(ngModel)]="contact.gender"
+          value="Female"
+        />
+        Female
+      </label>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="phone">Phone Number:</label>
-    <input
-      id="phone"
-      type="tel"
-      name="phone"
-      [(ngModel)]="contact.phone"
-      class="form-control"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="email">Email:</label>
+    <div class="col-sm-9">
+      <input
+        id="email"
+        type="email"
+        name="email"
+        [(ngModel)]="contact.email"
+        class="form-control"
+        required
+      />
+    </div>
   </div>
-  <div class="form-group">
-    <label for="city">City:</label>
-    <input
-      id="city"
-      type="text"
-      name="city"
-      [(ngModel)]="contact.city"
-      class="form-control"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="phone">Phone Number:</label>
+    <div class="col-sm-9">
+      <input
+        id="phone"
+        type="tel"
+        name="phone"
+        [(ngModel)]="contact.phone"
+        class="form-control"
+        required
+      />
+    </div>
   </div>
-  <div class="form-group">
-    <label for="state">State:</label>
-    <input
-      id="state"
-      type="text"
-      name="state"
-      [(ngModel)]="contact.state"
-      class="form-control"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="city">City:</label>
+    <div class="col-sm-9">
+      <input
+        id="city"
+        type="text"
+        name="city"
+        [(ngModel)]="contact.city"
+        class="form-control"
+      />
+    </div>
   </div>
-  <div class="form-group">
-    <label for="country">Country:</label>
-    <input
-      id="country"
-      type="text"
-      name="country"
-      [(ngModel)]="contact.country"
-      class="form-control"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="state">State:</label>
+    <div class="col-sm-9">
+      <input
+        id="state"
+        type="text"
+        name="state"
+        [(ngModel)]="contact.state"
+        class="form-control"
+      />
+    </div>
   </div>
-  <div class="form-group">
-    <label for="dateOfBirth">Date of Birth:</label>
-    <input
-      id="dateOfBirth"
-      type="date"
-      name="dateOfBirth"
-      [(ngModel)]="contact.dateOfBirth"
-      class="form-control"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="country">Country:</label>
+    <div class="col-sm-9">
+      <input
+        id="country"
+        type="text"
+        name="country"
+        [(ngModel)]="contact.country"
+        class="form-control"
+      />
+    </div>
   </div>
-  <div class="form-group">
-    <label for="picture">Picture:</label>
-    <input
-      id="picture"
-      type="file"
-      name="gender"
-      [(ngModel)]="contact.picture"
-      class="form-control"
-      accept="image/*"
-    />
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="dateOfBirth"
+      >Date of Birth:</label
+    >
+    <div class="col-sm-9">
+      <input
+        id="dateOfBirth"
+        type="date"
+        name="dateOfBirth"
+        [(ngModel)]="contact.dateOfBirth"
+        class="form-control"
+      />
+    </div>
   </div>
-  <button class="btn btn-primary">Add</button>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label" for="picture">Picture:</label>
+    <div class="col-sm-9">
+      <input
+        id="picture"
+        type="text"
+        name="picture"
+        [(ngModel)]="contact.picture"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Add new contact</button>
 </form>

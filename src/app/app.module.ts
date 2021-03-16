@@ -13,7 +13,8 @@ import { RpadPipe } from './pipes/rpad.pipe';
 import { HttpClientModule } from "@angular/common/http";
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 
 
 
@@ -34,15 +35,15 @@ import { FormsModule } from '@angular/forms';
     RpadPipe,
     ContactListComponent,
     AddContactComponent,
+    EditContactComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-
-
+    FormsModule,
+    ReactiveFormsModule,
 
 
   ],

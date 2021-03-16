@@ -4,14 +4,14 @@
       "id": 5,
       "firstname": "Bryce",
       "lastname": "Eden",
+      "gender": "Female",
       "email": "beden4@shinystat.com",
-      "dateOfBirth": "1971-01-04",
-      "phone": "8101259621",
-      "gender": "Genderfluid",
+      "phone": "0748594848",
       "city": "Flint",
       "state": "MI",
       "country": "United States",
-      "picture": "http://dummyimage.com/243x222.png/cc0000/ffffff"
+      "picture": "http://dummyimage.com/243x222.png/cc0000/ffffff",
+      "dateOfBirth": "1971-01-04"
     },
     {
       "id": 7,
@@ -1247,6 +1247,19 @@
       "state": "Constanta",
       "country": "Romania",
       "picture": "https://images.pexels.com/photos/4376182/pexels-photo-4376182.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    },
+    {
+      "gender": "Female",
+      "picture": "https://media.discordapp.net/attachments/311941530254442497/817362545303355393/1614944812333.jpg?width=380&height=676",
+      "firstname": "Tuca",
+      "lastname": "Muca",
+      "email": "tuca.muca@gmail.com",
+      "phone": "0789568948",
+      "city": "buc",
+      "state": "buc",
+      "country": "ro",
+      "dateOfBirth": "2018-04-04",
+      "id": 103
     }
   ]
 }

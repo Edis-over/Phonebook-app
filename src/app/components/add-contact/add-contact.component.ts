@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Contact } from 'src/app/model/contact';
+import { PhonebookService } from 'src/app/services/phonebook.service';
+
 
 
 @Component({
@@ -9,10 +12,17 @@ import { Contact } from 'src/app/model/contact';
 })
 export class AddContactComponent implements OnInit {
   contact: Contact;
-  constructor() { }
+  constructor(private service: PhonebookService, private router: Router) { }
 
   ngOnInit(): void {
     this.contact = new Contact()
+  }
+  addContact() {
+    this.service.addNewContact(this.contact)
+      .subscribe(contact => {
+        console.log('Added new contact', contact.id)
+        this.router.navigate(['/contact-details', contact.id])
+      })
   }
 
 }

@@ -1,17 +1,22 @@
-* {
-  padding: 0;
-  box-sizing: border-box;
-  .container{
-    #title{
+.container{
+  width:auto;
+  margin:0 12%  ;
+  padding:0;
+  #title{
+    margin:0;
+  }
+  #main-content{
+    margin:0;
+    #sidebar{
+      padding:0;
+
     }
-    #main-content{
-      #sidebar{
+    #content{
+      height:88vh;
+      padding:50px;
+      overflow-y: scroll;
 
-      }
-      #content{
-
-
-      }
     }
   }
 }
+

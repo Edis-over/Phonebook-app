@@ -1,0 +1,81 @@
+<form [formGroup]="contactForm">
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">First Name</label>
+    <div class="col-sm-9">
+      <input formControlName="firstname" type="text" />
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Last Name</label>
+    <div class="col-sm-9">
+      <input formControlName="lastname" type="text" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Gender</label>
+    <div class="col-sm-9">
+      <label>
+        <input
+          formControlName="gender"
+          type="radio"
+          name="gender"
+          value="Male"
+        />
+        Male
+      </label>
+      <label>
+        <input
+          formControlName="gender"
+          type="radio"
+          name="gender"
+          value="Female"
+        />
+        Female
+      </label>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Email</label>
+    <div class="col-sm-9">
+      <input formControlName="email" type="email" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Phone number</label>
+    <div class="col-sm-9">
+      <input formControlName="phone" type="tel" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">City</label>
+    <div class="col-sm-9">
+      <input formControlName="city" type="text" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">State</label>
+    <div class="col-sm-9">
+      <input formControlName="state" type="text" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Country</label>
+    <div class="col-sm-9">
+      <input formControlName="country" type="text" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Picture</label>
+    <div class="col-sm-9">
+      <input formControlName="picture" type="text" />
+    </div>
+  </div>
+  <button
+    class="btn btn-{{ contactForm.valid ? 'primary' : 'danger' }}"
+    [disabled]="contactForm.invalid"
+    (click)="saveChanges()"
+  >
+    Save
+  </button>
+</form>

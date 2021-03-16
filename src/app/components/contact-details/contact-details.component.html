@@ -34,5 +34,7 @@
   <div class="col-3">Country:</div>
   <div class="col">{{ contact.country }}</div>
 </div>
-
+<button class="btn btn-primary" [routerLink]="['/edit-contact', contact.id]">
+  Edit
+</button>
 <button class="btn btn-danger" (click)="deleteContact()">Delete Contact</button>
